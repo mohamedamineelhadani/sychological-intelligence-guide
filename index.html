@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل إتقان الرد الذكي والذكاء العاطفي - الواقع والسوشيال ميديا</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            850: '#111827',
+                            900: '#0f172a',
+                            950: '#020617',
+                        },
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                        },
+                        indigo: {
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-white pb-20">
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 left-6 z-50 flex items-center gap-3 bg-emerald-600 text-white px-5 py-3 rounded-xl shadow-2xl border border-emerald-400/30">
+        <i class="fa-solid fa-circle-check text-lg"></i>
+        <span id="toast-message" class="text-xs sm:text-sm font-bold">تم نسخ الرد بنجاح!</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-600 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-emerald-500/20">
+                    <i class="fa-solid fa-shield-cat text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-black text-lg sm:text-xl tracking-tight text-white">الرزانة والذكاء النفسي <span class="text-gradient text-xs px-2 py-0.5 rounded-full bg-emerald-950/80 border border-emerald-500/30">الواقع + افتراضي</span></h1>
+                    <p class="text-xs text-slate-400 hidden sm:block">Mastering High-Status Reactions in Real Life & Online</p>
+                </div>
+            </div>
+
+            <!-- Quick Navigation Menu -->
+            <nav class="hidden lg:flex items-center gap-1 bg-slate-900/80 p-1.5 rounded-xl border border-slate-800 text-xs font-bold">
+                <a href="#rules" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">القواعد الذهبية</a>
+                <a href="#scenarios" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">سيناريوهات الحية</a>
+                <a href="#bodylanguage" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">لغة الجسد والنبرة</a>
+                <a href="#simulator" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 transition">مختبر المحاكاة</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="#simulator" class="px-4 py-2 bg-gradient-to-r from-emerald-600 to-indigo-600 hover:from-emerald-500 hover:to-indigo-500 text-white rounded-xl text-xs sm:text-sm font-bold shadow-md shadow-emerald-600/20 transition">
+                    <i class="fa-solid fa-gamepad ml-1.5"></i> تجربة المباشرة
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 space-y-16">
+
+        <!-- HERO SECTION -->
+        <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900/95 to-slate-950 border border-slate-800 p-8 sm:p-12 shadow-2xl">
+            <div class="absolute -top-24 -left-24 w-96 h-96 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 max-w-3xl space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <span>شرح بسيط، عميق، ومفهوم جداً بالدارجة المغربية</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-black text-white leading-tight">
+                    كيفاش تكون <span class="text-gradient">تقيل، رزينات، ومسيطر</span> على أعصابك فالسوشيال ميديا وفي الشارع؟
+                </h2>
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                    سواء كتب ليك شي حد تعليق خايب في فيسبوك ولا إنستغرام، ولا تعرضتي لسب وقالة احترام مباشرة فالشارع، الخدمة، ولا مع القارب.. هاد الدليل كيشرح ليك بأسلوب سهل وبسيط السر النفسي باش تبقى أنت المترفع والمسيطر دائماً، وتخلي الطرف الآخر يحس بالنقص الصغير.
+                </p>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-800/80">
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                        <span class="text-[11px] text-slate-400 block">المجال</span>
+                        <span class="text-sm font-bold text-emerald-400">واقع + افتراضي</span>
+                    </div>
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                        <span class="text-[11px] text-slate-400 block">الهدف</span>
+                        <span class="text-sm font-bold text-indigo-400">السيطرة والوقار</span>
+                    </div>
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                        <span class="text-[11px] text-slate-400 block">لغة الجسد</span>
+                        <span class="text-sm font-bold text-cyan-400">نبرة حازمة وهادئة</span>
+                    </div>
+                    <div class="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
+                        <span class="text-[11px] text-slate-400 block">أسلوب الرد</span>
+                        <span class="text-sm font-bold text-purple-400">تفكيك بذكاء</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: CORE GOLDEN RULES (SIMPLE EXPLANATION) -->
+        <section id="rules" class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h3 class="text-xs font-extrabold text-emerald-400 uppercase tracking-widest">المبادئ النفسية</h3>
+                <h4 class="text-2xl sm:text-3xl font-black text-white">4 القواعد الذهبية للرزانة الشخصية</h4>
+                <p class="text-xs sm:text-sm text-slate-400">شرح مبسط وعميق للسر لي كيجعل الناس القويين نفسياً ما كيتعصبوش بسهولة</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- Rule 1 -->
+                <div class="glass-card glass-card-hover p-6 rounded-2xl space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-xl font-black">
+                            1
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-white">قاعدة الفجوة الزمنية (Pause & Breathe)</h5>
+                            <span class="text-xs text-emerald-400 font-semibold">ما تجاوبش في نفس الثانية!</span>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        <strong>الشرح البسيط:</strong> ملي شي حد يسبك ولا يستفزك، عقلك العاطفي كيبغي يتعصب ويغوت مباشرة. إلى جاوبتي في البلاصة، راك طحتي في المصيدة ديالو. خذ **3 ديال الثواني** ديال التنفس العميق في الواقع، ولا **دقيقة** فالميديا. هاد الوقفة القصيرة كتعطي الساروت لـ "عقلك الذكي" باش يفكر ببرود.
+                    </p>
+                </div>
+
+                <!-- Rule 2 -->
+                <div class="glass-card glass-card-hover p-6 rounded-2xl space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-600/20 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-xl font-black">
+                            2
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-white">تقنية المرآة النفسية (Psychological Mirror)</h5>
+                            <span class="text-xs text-indigo-400 font-semibold">المشكل فيه هو ماشي فيك أنت</span>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        <strong>الشرح البسيط:</strong> يفهم بلي الإنسان لي كيمشي يسب الناس في الشارع ولا يكتب تعليق معاطي، راه كيعبر على **الفراغ والغديد الداخلي** لي عايش فيه هو. الكلام الخايب ديالي ماشي هو الحقيقة ديالك، هو فقط "مراية" كتعكس الحرمان والعقد ديالو. أنت غير حيط كيرجع ليه صدى الكلام.
+                    </p>
+                </div>
+
+                <!-- Rule 3 -->
+                <div class="glass-card glass-card-hover p-6 rounded-2xl space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-xl bg-purple-600/20 border border-purple-500/30 text-purple-400 flex items-center justify-center text-xl font-black">
+                            3
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-white">السيطرة على لغة الجسد والنبرة فالواقع</h5>
+                            <span class="text-xs text-purple-400 font-semibold">العين بالعين والنبرة منخفضة وحازمة</span>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        <strong>الشرح البسيط:</strong> فالشارع ولا الخدمة، القوة ماشي هي الغوات والصداع. القوة هي تسرح ظهرك، تشوف مباشرة في عينيه ببرود تام، وتتكلم بنبرة **صوت هادئة، بطيئة، وقوية**. الغوات دليل على الخوف؛ والهدوء دليل على التحكم والسيطرة المطلقة.
+                    </p>
+                </div>
+
+                <!-- Rule 4 -->
+                <div class="glass-card glass-card-hover p-6 rounded-2xl space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-600/20 border border-cyan-500/30 text-cyan-400 flex items-center justify-center text-xl font-black">
+                            4
+                        </div>
+                        <div>
+                            <h5 class="text-lg font-bold text-white">تقنية نزع السلاح (Unshakeable Neutrality)</h5>
+                            <span class="text-xs text-cyan-400 font-semibold">تحويل الطاقة الشاطحة للاشيء</span>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        <strong>الشرح البسيط:</strong> المعتدي كيتسناك تغضب وتدخل معاه في صراع. ملي كتجاوبو بكلمات هادئة وقصيرة بحال: *"هادشي هو رأيك وتفكريك"* ولا *"واش ساليتي كلامك؟"*، راك كتحيد ليه الأكسجين لي كان غادي يغذي بيه المعركة ديالو.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 2: REAL LIFE vs ONLINE SCENARIOS (PRACTICAL EXAMPLES) -->
+        <section id="scenarios" class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h3 class="text-xs font-extrabold text-indigo-400 uppercase tracking-widest">تطبيقات حية</h3>
+                <h4 class="text-2xl sm:text-3xl font-black text-white">سيناريوهات حقيقية وافتراضية وكيفاش تتصرف</h4>
+                <p class="text-xs sm:text-sm text-slate-400">نماذج من واقع الحياة اليومية وكيفاش ترد بذكاء وهيبة</p>
+            </div>
+
+            <!-- Accordion Scenarios -->
+            <div class="space-y-4">
+
+                <!-- Scenario 1: Social Media Troll -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-9 h-9 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-sm"><i class="fa-solid fa-at"></i></span>
+                            <div>
+                                <h5 class="text-base font-bold text-white">السيناريو 1: تعليق مسيء في مواقع التواصل الاجتماعي</h5>
+                                <span class="text-xs text-slate-400">مثال: "سير تقود أنت لي مريض، انصح كرك هو الأول..."</span>
+                            </div>
+                        </div>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-slate-900 text-blue-400 border border-slate-800 font-semibold w-fit">افتراضي (Online)</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800/80 space-y-2">
+                            <span class="text-xs font-bold text-red-400 block"><i class="fa-solid fa-xmark ml-1"></i> التصرف العادي الخاطئ:</span>
+                            <p class="text-xs text-slate-300 leading-relaxed">الرد بنفس السب والشتم. هادشي كيعطيه الانتباه لي باغي، وكيخليك تبان قدام المتابعين بحالك بحالو.</p>
+                        </div>
+                        <div class="bg-slate-950/60 p-4 rounded-xl border border-emerald-500/30 space-y-2">
+                            <span class="text-xs font-bold text-emerald-400 block"><i class="fa-solid fa-check ml-1"></i> الرد النفسي الساحق:</span>
+                            <p class="text-xs text-emerald-100 leading-relaxed font-medium">"التعبير ديالك كيعكس بالحرف حجم الحرمان والعقد النفسية لي كتعيشها. ملي كتعجز الحجة، كيبدا الشتم لتفريغ الإحباط. الله يشافيك."</p>
+                            <span class="text-[11px] text-slate-400 block pt-1">💡 **السبب:** عريتي العقدة ديالو قدام الناس وخرجتي راسك بوقار.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scenario 2: Street Direct Insult -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-9 h-9 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm"><i class="fa-solid fa-road"></i></span>
+                            <div>
+                                <h5 class="text-base font-bold text-white">السيناريو 2: سب مباشر ولا قلة احترام في الشارع / الزنقة</h5>
+                                <span class="text-xs text-slate-400">مثال: شخص صدم فيك ولا غوت عليك بأسلوب زنقاوي قبيح</span>
+                            </div>
+                        </div>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-slate-900 text-emerald-400 border border-slate-800 font-semibold w-fit">واقعي (Real Life)</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800/80 space-y-2">
+                            <span class="text-xs font-bold text-red-400 block"><i class="fa-solid fa-xmark ml-1"></i> التصرف العادي الخاطئ:</span>
+                            <p class="text-xs text-slate-300 leading-relaxed">الارتباك والتراجع، ولا الاندفاع بضراب وغوات كيهدد سلامتك الشخصية بدون سبب مستحق.</p>
+                        </div>
+                        <div class="bg-slate-950/60 p-4 rounded-xl border border-emerald-500/30 space-y-2">
+                            <span class="text-xs font-bold text-emerald-400 block"><i class="fa-solid fa-check ml-1"></i> التصرف الذكي ذو الهيبة:</span>
+                            <p class="text-xs text-emerald-100 leading-relaxed font-medium">توقف، ووقف مستقيم. شوف ففيه مباشرة بعينيك لمدة 2 ثواني ببرود تام. وقول بصوت منخفض وحازم: *"طريقة كلامك كتدل على مستواك. كمل طريقك احسن لك."* ثم تحرك ببطء وثقة.</p>
+                            <span class="text-[11px] text-slate-400 block pt-1">💡 **السبب:** هدوؤك ونظرتك الحازمة كترعب الشخص لي باغي يدير الصداع.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scenario 3: Workplace / University Passive Aggression -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-9 h-9 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-sm"><i class="fa-solid fa-briefcase"></i></span>
+                            <div>
+                                <h5 class="text-base font-bold text-white">السيناريو 3: الاستفزاز و"المعاطية" في مكان العمل ولا الدراسة</h5>
+                                <span class="text-xs text-slate-400">مثال: زميل كيقشب عليك بقلة احترام ولا كينقص من الخدمة ديالك قدام الناس</span>
+                            </div>
+                        </div>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-slate-900 text-purple-400 border border-slate-800 font-semibold w-fit">واقعي (Work / Study)</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800/80 space-y-2">
+                            <span class="text-xs font-bold text-red-400 block"><i class="fa-solid fa-xmark ml-1"></i> التصرف العادي الخاطئ:</span>
+                            <p class="text-xs text-slate-300 leading-relaxed">الابتسامة الصفراء والموافقة، ولا الضحك معاه على راسك باش ما تحرجش الموقف.</p>
+                        </div>
+                        <div class="bg-slate-950/60 p-4 rounded-xl border border-emerald-500/30 space-y-2">
+                            <span class="text-xs font-bold text-emerald-400 block"><i class="fa-solid fa-check ml-1"></i> التصرف الذكي والحازم:</span>
+                            <p class="text-xs text-emerald-100 leading-relaxed font-medium">قطع الابتسامة فوراً. شوف فيه بجدية وقول ليه بابتسامة باردة: *"واش هاد الملاحظة عندها علاقة بالموضوع لي كنناقشوه، ولا غير محاولة فاشلة للفت الانتباه؟"*</p>
+                            <span class="text-[11px] text-slate-400 block pt-1">💡 **السبب:** أحرجتيه قدام كلشي وحطيتي حدود صارمة في الحين.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scenario 4: Relative / Friend Disrespect -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 space-y-4">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-9 h-9 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-sm"><i class="fa-solid fa-users"></i></span>
+                            <div>
+                                <h5 class="text-base font-bold text-white">السيناريو 4: قلة الاحترام من قريب أو صديق مقرب</h5>
+                                <span class="text-xs text-slate-400">مثال: قريب كيتطاول عليك بكلمات قاسية فجلسة عائلية</span>
+                            </div>
+                        </div>
+                        <span class="text-xs px-2.5 py-1 rounded-md bg-slate-900 text-amber-400 border border-slate-800 font-semibold w-fit">عائلي / اجتماعي</span>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800/80 space-y-2">
+                            <span class="text-xs font-bold text-red-400 block"><i class="fa-solid fa-xmark ml-1"></i> التصرف العادي الخاطئ:</span>
+                            <p class="text-xs text-slate-300 leading-relaxed">الانفعال والعياط لي كيكبر الصداع وكيردك أنت هو "المغضوب عليه" في العائلة.</p>
+                        </div>
+                        <div class="bg-slate-950/60 p-4 rounded-xl border border-emerald-500/30 space-y-2">
+                            <span class="text-xs font-bold text-emerald-400 block"><i class="fa-solid fa-check ml-1"></i> التصرف الذكي والمحترم:</span>
+                            <p class="text-xs text-emerald-100 leading-relaxed font-medium">سكت لمدة 3 ثواني، وقول ليه بصوت هادئ جداً ورزين: *"أنا كنحترمك، وكنتسنى منك نفس الاحترام. هاد الطريقة ديال الكلام ما مقبولاش معايا."*</p>
+                            <span class="text-[11px] text-slate-400 block pt-1">💡 **السبب:** بينتي نضجك العاطفي ورسمتي خط أحمر واضح بلا ما تخسر العائلة.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: REAL LIFE BODY LANGUAGE & VOICE MASTERY -->
+        <section id="bodylanguage" class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h3 class="text-xs font-extrabold text-cyan-400 uppercase tracking-widest">المواجهة المباشرة</h3>
+                <h4 class="text-2xl sm:text-3xl font-black text-white">أسرار لغة الجسد والنبرة فالواقع</h4>
+                <p class="text-xs sm:text-sm text-slate-400">كيفاش كتظهر القوة والوقار ديالك قبل ما تنطق بكلمة واحدة</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="glass-card glass-card-hover p-6 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-600/20 text-cyan-400 flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h5 class="text-base font-bold text-white">1. نظرة العينين (Eye Contact)</h5>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        ما تحدرش عينيك للأرض نهائياً! ملي شي حد يستفزك، شوف في المنطقة لي بين عينيه ببرود تام وبلا ما ترمش بزاف. النظرة المباشرة والهادئة كترسل إشارة للمخ ديال الطرف الآخر بلي أنت ما خايفش منه إطلاقاً.
+                    </p>
+                </div>
+
+                <div class="glass-card glass-card-hover p-6 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-child-reaching"></i>
+                    </div>
+                    <h5 class="text-base font-bold text-white">2. وقفة الاستقرار (Posture)</h5>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        افتح كتافك، خلي ظهرك مستقيم، وما تعقدش يديك على صدرك حيت هادشي كيبين بلي راك في حالة دفاع. خلي يديك مفتوحين بجنبك بمرونة. هاد الوقفة كتعكس الثقة بالنفس والسيطرة المكانية.
+                    </p>
+                </div>
+
+                <div class="glass-card glass-card-hover p-6 rounded-2xl space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-lg font-bold">
+                        <i class="fa-solid fa-volume-low"></i>
+                    </div>
+                    <h5 class="text-base font-bold text-white">3. نبرة الصوت البطيئة (Voice Control)</h5>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        ملي كيتعصب الإنسان، صوته كيرتفع وكيولي سريع. السر العظيم هو تعمل العكس تماماً: **نقص السرعة ديال كلامك بـ 50% ونزل نبرة صوتك.** الصوت البطيئ والرصين كيجبر الجميع يتصنط ليك وبيهز الهيبة ديالك.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 4: INTERACTIVE PRACTICE LAB & GENERATOR -->
+        <section id="simulator" class="space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h3 class="text-xs font-extrabold text-emerald-400 uppercase tracking-widest">المختبر التفاعلي</h3>
+                <h4 class="text-2xl sm:text-3xl font-black text-white">مولد الردود الذكية وتفكيك المواقف</h4>
+                <p class="text-xs sm:text-sm text-slate-400">اختر نوع الهجوم لي تعرضتي ليه وشوف التحليل النفسي والرد الجاهز</p>
+            </div>
+
+            <div class="glass-card rounded-3xl p-6 sm:p-8 border border-slate-800 space-y-6">
+                
+                <!-- Category Select Buttons -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">اختر سياق الهجوم:</label>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        <button onclick="setLabCategory('online')" id="btn-online" class="p-3 text-center rounded-xl bg-emerald-600 text-white text-xs font-bold transition flex flex-col items-center gap-1.5 shadow-lg shadow-emerald-600/20">
+                            <i class="fa-solid fa-laptop text-base"></i>
+                            <span>سوشيال ميديا</span>
+                        </button>
+                        <button onclick="setLabCategory('street')" id="btn-street" class="p-3 text-center rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold transition flex flex-col items-center gap-1.5 hover:bg-slate-800">
+                            <i class="fa-solid fa-person-walking text-base"></i>
+                            <span>الشارع / سب مباشر</span>
+                        </button>
+                        <button onclick="setLabCategory('work')" id="btn-work" class="p-3 text-center rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold transition flex flex-col items-center gap-1.5 hover:bg-slate-800">
+                            <i class="fa-solid fa-building text-base"></i>
+                            <span>العمل / الدراسة</span>
+                        </button>
+                        <button onclick="setLabCategory('family')" id="btn-family" class="p-3 text-center rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-bold transition flex flex-col items-center gap-1.5 hover:bg-slate-800">
+                            <i class="fa-solid fa-house text-base"></i>
+                            <span>العائلة / الأقارب</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Input box for user custom prompt -->
+                <div class="space-y-2">
+                    <label for="custom-attack" class="block text-xs font-bold text-slate-400 uppercase tracking-wider">اكتب الكلام الخايب ولا الاستفزاز لي قالو ليك:</label>
+                    <div class="relative">
+                        <input id="custom-attack" type="text" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 pl-32 text-xs sm:text-sm text-slate-100 focus:outline-none focus:border-emerald-500 transition" placeholder="مثلاً: كتقول ليا شي حاجة خايبة..." value="سير تقود أنت اللي مريض، انصح كرك هو الأول...">
+                        <button onclick="generateCustomResponse()" class="absolute left-2 top-2 bottom-2 px-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-bold transition flex items-center gap-2 shadow-md shadow-emerald-600/20">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span>تفكيك الرد</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Generated Dynamic Output Card -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-800/80">
+                    
+                    <!-- Psychological Analysis -->
+                    <div class="bg-slate-950/80 rounded-2xl p-5 border border-slate-800 space-y-3">
+                        <div class="flex items-center gap-2 text-indigo-400 font-bold text-xs uppercase tracking-wider">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            <span>التحليل النفسي لضعف المستفِز</span>
+                        </div>
+                        <p id="output-analysis" class="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
+                            هاد الكلام كيبين بلي الشخص كيعاني من غل داخلي وعاجز يواجه الموضوع بالمنطق والعقل. اللجوء للشتائم هو صرخة عجز طفولية لطلب الانتباه.
+                        </p>
+                    </div>
+
+                    <!-- High Status Response -->
+                    <div class="bg-emerald-950/30 rounded-2xl p-5 border border-emerald-500/30 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-wider">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>الرد الهادئ ذو الهيبة القوية</span>
+                            </div>
+                            <button onclick="copyGeneratedText()" class="text-xs text-slate-400 hover:text-white flex items-center gap-1 bg-slate-900 px-2.5 py-1 rounded-lg border border-slate-800">
+                                <i class="fa-regular fa-copy"></i> نسخ
+                            </button>
+                        </div>
+                        <p id="output-response" class="text-xs sm:text-sm text-emerald-100 font-bold leading-relaxed bg-slate-950/60 p-3.5 rounded-xl border border-emerald-900/40">
+                            "التعبير ديالك كيعكس بالحرف حجم الحرمان والعقد النفسية لي كتعيشها. ملي كتعجز الحجة، كيبدا الشتم لتفريغ الإحباط. الله يشافيك."
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 5: QUICK RESPONSES CHEAT SHEET -->
+        <section class="space-y-8 pb-10">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h3 class="text-xs font-extrabold text-purple-400 uppercase tracking-widest">بطاقات السريعة</h3>
+                <h4 class="text-2xl sm:text-3xl font-black text-white">صيغ جاهزة للنسخ والحفظ</h4>
+                <p class="text-xs sm:text-sm text-slate-400">عبارات راقية، قاسية وموزونة تقدر تحفظها وتستعملها فوراً</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Card 1 -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <span class="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded">للرد على الشتم المجاني</span>
+                        <p class="text-xs text-slate-200 leading-relaxed pt-2 font-semibold">
+                            "ملي كتعجز الهضرة والمحتوى الهادف، كيبدا التعبير على التربية والبيئة. شكراً حيت بينتي للناس المستوى الحقيقي ديالك بلا ما نتعبو راسنا."
+                        </p>
+                    </div>
+                    <button onclick="copyDirectText(this)" class="w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl text-xs font-bold text-slate-300 transition">نسخ العبارة</button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <span class="text-[10px] font-bold text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2 py-0.5 rounded">للرد على الاستهزاء والتسفيه</span>
+                        <p class="text-xs text-slate-200 leading-relaxed pt-2 font-semibold">
+                            "الأفكار الكبيرة كيتناقشو مع العقول الواعية، أما الشتم كيبقى هواية العقول الخاوية. الله يعينك على هاد الفراغ لي عايش فيه."
+                        </p>
+                    </div>
+                    <button onclick="copyDirectText(this)" class="w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl text-xs font-bold text-slate-300 transition">نسخ العبارة</button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card glass-card-hover p-5 rounded-2xl space-y-3 flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <span class="text-[10px] font-bold text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded">للرد الحازم السريع فالواقع</span>
+                        <p class="text-xs text-slate-200 leading-relaxed pt-2 font-semibold">
+                            "طريقة كلامك كتعكس قيمتك. أنا ما كنزينش الهضرة مع الناس لي ما عندهمش الاحترام الذاتي. سالينا الهضرة."
+                        </p>
+                    </div>
+                    <button onclick="copyDirectText(this)" class="w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl text-xs font-bold text-slate-300 transition">نسخ العبارة</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-slate-800/80 text-center space-y-3">
+        <p class="text-xs text-slate-500">
+            دليل الذكاء العاطفي والرد الرزين &copy; 2026 - مصمم لتعزيز الوقار، الثقة بالنفس، والانضباط الشخصي.
+        </p>
+        <p class="text-[11px] text-slate-600">
+            "القوة الحقيقية هي التحكم الكلي في ردود أفعالك عندما يحاول الآخرون سحبك إلى القاع."
+        </p>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script src="javascript/script.js"></script>
+</body>
+</html>
